@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <script type="text/javascript" src="http://g.tbcdn.cn/kissy/k/1.4.8/seed-min.js" charset="utf-8" data-config="{combine:true}"></script> 
+</head>
+<body>
+		<ul class="J_container">
+			<li class="J_Items" data-shopids="9970">
+				<img src="http://g.tbcdn.cn/s.gif" class="pic" alt="">
+				<h3 class="title"></h3>
+				<div>
+					<div class="newPrice"><i>￥</i><em class="pr"></em></div>
+					<div class="oldPrice"><i>￥</i><em class="oldpr"></em></div>
+				</div>
+				<p>销量<span class="sellnum"></span></p>
+				<p>库存<span class="store"></span></p>
+				<p>假销量<span class="salenum"></span></p>
+			</li>
+			<li class="J_Items" data-shopids="9374">
+				<img src="http://g.tbcdn.cn/s.gif" class="pic" alt="">
+				<h3 class="title"></h3>
+				<div>
+					<div class="newPrice"><i>￥</i><em class="pr"></em></div>
+					<div class="oldPrice"><i>￥</i><em class="oldpr"></em></div>
+				</div>
+				<p>销量<span class="sellnum"></span></p>
+				<p>库存<span class="store"></span></p>
+				<p>假销量<span class="salenum"></span></p>
+			</li>
+		</ul> 
+	<script>
+	// KISSY.config('modules',{
+	//     'mod/price':{
+	//     	"fullpath":"http://g.tbcdn.cn/hitao/hitao-assets/1.0.4/mod/goods.js",
+	//		"alias":["mode/goods"]
+	//     }     
+	// });
+	KISSY.config({
+		/*****
+		combo可以理解为合并静态资源文件的规则
+		阿里cdn使用??合并资源
+		******/
+		combine:true,
+	    packages:[{
+	        base:'http://g.tbcdn.cn/hitao/hitao-assets/1.0.4/',//包url路径
+	        name:'mod/goods',//包名称或起始路径
+	        debug:true
+	        // ignorePackageNameInUri:true,	        
+	    }]
+	    // packages:{
+	    // 	'mod/goods':{
+		   //  	base:'http://g.tbcdn.cn/hitao/hitao-assets/1.0.4/',
+		   //  	debug:true
+	    // 	}
+	    // }
+	});
+	KISSY.use('mod/goods',function(S,G){
+		G.init();
+	});
+
+</script>
+</body>
+</html>
